@@ -4,7 +4,7 @@ var vol;
 var speed=1.02;
 var mic;
 var spectrum=[]
-var ct=0
+var ct=3
 var msc
 var back
 
@@ -16,7 +16,7 @@ function setup(){
 //  mic.getSources()
 //  console.log(getSources())
 //  mic.setSource(0);
-   mic.start()
+//   mic.start()
   analyze_vol=new p5.Amplitude();
    analyze_vol.setInput(mic)
   for(i=0;i<100;i++){
@@ -192,6 +192,7 @@ function Point(){
 
 
 function mousePressed() {
+  mic.start()
   // store in a variable the current state
   // by calling “fullscreen” without arguments
   // you get either true or false
