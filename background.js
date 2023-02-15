@@ -12,7 +12,7 @@ var back
 function setup(){
   colorMode(HSB,255)
    createCanvas(windowWidth,windowHeight)
-     mic= new p5.AudioIn()
+ //    mic= new p5.AudioIn()
 //  mic.getSources()
 //  console.log(getSources())
 //  mic.setSource(0);
@@ -192,6 +192,7 @@ function Point(){
 
 
 function mousePressed() {
+      mic= new p5.AudioIn()
   mic.start()
   // store in a variable the current state
   // by calling “fullscreen” without arguments
