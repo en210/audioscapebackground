@@ -10,6 +10,7 @@ var back
 
 
 function setup(){
+   getAudioContext().suspend();
   colorMode(HSB,255)
    createCanvas(windowWidth,windowHeight)
  //    mic= new p5.AudioIn()
@@ -192,6 +193,7 @@ function Point(){
 
 
 function mousePressed() {
+  userStartAudio();
       mic= new p5.AudioIn()
   mic.start()
   // store in a variable the current state
